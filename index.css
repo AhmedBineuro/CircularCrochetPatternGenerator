@@ -1,0 +1,82 @@
+/************Remove Arrows**************/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/**************************************/
+@font-face{
+    font-family: CosmicMiles;
+    src:url(/font/Cosmic_Miles.ttf);
+}
+body{
+    font-size: 90%;
+    background-color:rgb(160, 140, 140);
+    padding:2em;
+}
+.AppBackground{
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+    background-color:rgb(180, 160, 160);
+    padding:2em;
+    border-radius: 1em;
+    height: fit-content;
+    height: fit-content;
+}
+
+.ControlFeed{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.AppHeader{
+    font-family: CosmicMiles;
+}
+.AppSegment{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+.AppLabel{
+    font-family: CosmicMiles;
+    font-size: large;
+    margin:0.5em;
+}
+.AppInput{
+    font-size: larger;
+    width:fit-content;
+    border-radius: 1em;
+    margin:0.5em;
+    margin-top: 0%;
+    background-color: rgb(140, 120, 120);
+    padding: 0.5em;
+    text-align: center;
+    align-self: center;
+    border: none;
+}
+.AppButton{
+    font-family: CosmicMiles;
+    font-size: larger;
+    border-radius: 1em;
+    background-color: rgb(140, 120, 120);
+    border: none;
+    padding: 0.5em;
+    margin: 5%;
+    width: fit-content;
+    height: fit-content;
+    transition: background-color 0.2s ease-in-out;
+}
+.AppButton:active{
+    background-color: rgb(100, 80, 80);
+}
