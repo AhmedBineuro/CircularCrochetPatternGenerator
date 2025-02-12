@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="/images/icon.ico" />
     <title>Circular crochet pattern generator</title>
   </head>
   <body>
     <div class="AppBackground">
-      <h1 class="AppHeader">Pattern Settings</h1>
+      <div class="AppHorzSegment">
+        <img class="AppIcon" src="/images/icon.svg" />
+        <h1 class="AppHeader">Pattern Settings</h1>
+      </div>
       <div class="ControlFeed">
         <div class="AppSegment">
           <label class="AppLabel">Number of rows: </label>
@@ -19,7 +23,7 @@
           <input class="AppInput" id="SegmentCount" type="number" value="4" />
           <script src="crochetApp.js" defer></script>
         </div>
-        <div class="AppSegment">
+        <div class="AppHorzSegment">
           <button class="AppButton" id="Submit" onclick="drawCustomPatter()">
             Submit
           </button>

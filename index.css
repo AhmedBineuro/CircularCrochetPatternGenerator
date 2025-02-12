@@ -30,6 +30,10 @@ body{
     height: fit-content;
     height: fit-content;
 }
+.AppIcon{
+    width: 6em;
+    margin: 1em;
+}
 
 .ControlFeed{
     display: flex;
@@ -41,12 +45,21 @@ body{
 }
 .AppHeader{
     font-family: CosmicMiles;
+    height: fit-content;
+    width: fit-content;
 }
 .AppSegment{
     display: flex;
     flex-direction: column;
     width: fit-content;
     height: fit-content;
+}
+.AppHorzSegment{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
 }
 .AppLabel{
     font-family: CosmicMiles;
