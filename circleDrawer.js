@@ -3,6 +3,17 @@ var virtCanvas=document.createElement("canvas");
 var virtCtx=virtCanvas.getContext("2d");
 var defStarting=Math.PI*0.5;
 var globalCount=0;
+class Pattern{
+    constructor (startingStitchCount=6,rowCount=3){
+        this.startingStichCount=startingStitchCount;
+        this.rowCount=rowCount;
+        var elementCount=0;
+        for(var i=1;i<=rowCount;i++){
+            elementCount+=i*startingStitchCount;
+        }
+        this.elements=Array(elementCount);
+    }
+}
 // Function to draw a segment of a ring
 // The angles are in radians
 //center is a javascript object with "x" and "y" keys
@@ -37,12 +48,9 @@ function drawNestedRings(center={"x":200,"y":200},initialSegmentCount=6,layers=1
     }
 }
 function drawCustomPatter(){
-    let canvas=document.getElementById("Pattern");
+    let canvas=document.getElementById("root");
     let ctx=canvas.getContext("2d");
-    virtCtx.rect(0, 0, virtCanvas.width, virtCanvas.height);
-    virtCtx.fillStyle = "white";
-    virtCtx.fill();
-    virtCtx.closePath();
+    virtCtx.clearRect(0, 0, virtCanvas.width, virtCanvas.height);
     var rowInput=document.getElementById("RowCount");
     var segmentInput=document.getElementById("SegmentCount");
     let rowCount=rowInput.value;
@@ -62,11 +70,12 @@ function drawCustomPatter(){
 
 //Downloading capabilities
 function downloadPattern(){
-    let canvas=document.getElementById("Pattern");
-    var dataURL=canvas.toDataURL("image/jpeg");
+    // let canvas=document.getElementById("root");
+    let canvas=virtCanvas;
+    var dataURL=canvas.toDataURL("image/png");
     var a=document.createElement('a');
     a.href=dataURL;
-    a.download="custom_pattern"+String(globalCount)+".jpeg";
+    a.download="custom_pattern"+String(globalCount)+".png";
     a.click();
     globalCount+=1;
 }
